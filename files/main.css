@@ -1,0 +1,301 @@
+body {
+  font-family: 'Volkhov', serif;
+  color: #ffffff !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.player-count {
+  font-family: 'Volkhov', serif !important;
+}
+
+.button-bar button,
+.ready-button button {
+  font-family: 'Bungee', sans-serif;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  letter-spacing: 1px;
+}
+
+.button-bar button,
+.ready-button button {
+  border-radius: 0.1rem !important;
+}
+
+.lobby8-qrcode button {
+  border-radius: 0.5rem !important;
+}
+
+.button-bar.powerby-8thwall {
+  display: none !important;
+}
+
+#lobby8-lobby span,
+.lobby8-qrcode {
+  font-family: 'poppins', serif !important;
+}
+/*This section here is responsible for the UI/UX for the lobby section */
+.lobby8-item {
+  color: #ffffff !important;
+  background-color: hsl(180, 42%, 42%) !important;
+}
+
+.lobby8-indicator,
+.lobby8-checkmark {
+  background-color: #ffff !important;
+}
+
+.lobby8-roster::-webkit-scrollbar {
+  background-color: #565656 !important;
+}
+
+.lobby8-roster::-webkit-scrollbar-thumb {
+  background-color: #197887 !important;
+}
+
+.landing8-background,
+.landing8-background-image {
+  background-repeat: repeat !important;
+  background-image: url('assets/art/background.png') !important;
+  background-size: 50vw !important;
+  animation: animate-background 12s linear infinite !important;
+  filter: blur(0.2vmax) brightness(0.7) !important;
+}
+
+@keyframes animate-background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 50vw 50vw;
+  }
+}
+
+#clickButton-container {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  font-size: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#clickButton {
+  font-size: 18px;
+  font-family: 'Bungee', 'Volkhov', serif;
+  font-weight: bold;
+  touch-action: manipulation;
+  padding: 10px 27px;
+  border: none;
+  background-color: #1E8F97;
+  color: white;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#clickButton:active, #clickButton:focus, #clickButton:focus-visible {
+   background-color: #15464c !important;  
+}
+
+#remaining-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  font-size: 18px;
+  font-family: 'Bungee', 'Volkhov', serif;
+  text-shadow: 0 0 5px #15464c;
+  font-weight: bold;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#instruction-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+
+  font-family: 'Bungee', 'Volkhov', serif;
+  font-size: 2em;
+
+  display: flex;
+  gap: 10vh;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+#instruction-container h2 {
+  margin: 0;
+  text-shadow: 3px 3px 0px rgba(30, 143, 151);
+}
+
+.red-on-yellow {
+  color: rgba(30, 143, 151) !important;
+  text-shadow: 3px 3px 0px rgb(255, 255, 255) !important;
+}
+
+#end-game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+
+  font-weight: bold;
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+#end-game-container h3 {
+  font-family: 'Bungee', 'Volkhov', serif;
+  margin: 0;
+}
+
+#winner-text {
+  font-size: 2em;
+  margin: 0;
+}
+
+#bottom-section {
+  position: absolute;
+  width: fit-content;
+  bottom: 20px;
+  max-width: 80vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  z-index: 1;
+}
+
+#bottom-section button {
+  padding: 10px 20px;
+  font-family: 'Bungee', sans-serif;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  backdrop-filter: blur(8px);
+  background-color: rgba(30, 143, 151);
+  -webkit-backdrop-filter: blur(8px);
+  letter-spacing: 1px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.pulse-once {
+  animation: pulse-once 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+}
+@keyframes pulse-once {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scaleUpFadeOut {
+  animation: scaleUpFadeOut 1.75s forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes scaleUpFadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+/* Center and style the game UI container */
+#remaining-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Timer styling */
+#timer {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 8px rgba(30, 143, 151);
+  width: 100%;
+  margin-bottom: 2px
+}
+
+/* Score container */
+#score-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Score styling */
+#gameScore {
+  margin-top: 2px;
+  font-size: 1.2em;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Score pop animation */
+.score-pop {
+  transform: scale(1.3);
+  color: #ffffff !important;
+  text-shadow: 0 0 8px rgb(30, 143, 151);
+}
+/* Hide game UI during lobby */
+#remaining-container,
+#clickButton-container,
+#instruction-container,
+#end-game-container,
+#bottom-section {
+  display: none !important;
+}
+
+/* Show when game starts */
+.game-active #remaining-container,
+.game-active #clickButton-container,
+.game-active #instruction-container,
+.game-active #end-game-container,
+.game-active #bottom-section {
+  display: flex !important;
+}
